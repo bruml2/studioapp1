@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vuetify Notes</title>
+</head>
+<body>
+  <h3>App Layout</h3>
+  <p>The entire vuetify section must be enclosed in v=app.  A permanent header is either <v-app-bar> or <v-toolbar>. Then v-content.</p>
+  <pre>
+    <v-app>
+      <v-app-bar></v-app-bar>
+         OR
+      <v-toolbar></v-toolbar>
+      <v-content>
+        stuff
+      </v-content>
+    </v-app>
+  </pre>
+
+  <h3>Component Layout</h3>
+  This is the (partial) layout of the HelloWorld component:
+  <pre>
+    <v-container>
+      <v-row text-xs-center wrap>
+        <v-col xs12>
+          <v-img
+            :src="require('../assets/logo.svg')"
+            class="my-3"
+            contain
+            height="200"
+          ></v-img>
+        </v-col>
+  
+        <v-col mb-4>
+          <h1 class="display-2 font-weight-bold mb-3">Welcome to Vuetify</h1>
+          <p class="subheading font-weight-regular">
+            For help and collaboration with other Vuetify developers,
+            <br />please join our online
+            <a href="https://community.vuetifyjs.com" target="_blank"
+              >Discord Community</a
+            >
+          </p>
+        </v-col>
+  
+        <v-col mb-5 xs12>
+          <h2 class="headline font-weight-bold mb-3">What's next?</h2>
+          <v-layout justify-center>
+            <a href="#" class="subheading mx-3">Explore Components</a>
+            <a href="#" class="subheading mx-3">Select a layout</a>
+            <a href="#" class="subheading mx-3">F.A.Q</a>
+          </v-layout>
+        </v-col>
+      </v-row>
+    </v-container>
+  </pre>
+  <p>The v-container component simply centers your content in the middle of the screen. If you add the fluid prop, your content will occupy the full width of the screen.</p>
+  <p>v-row (v-layout in v1.0) is used to group content and align it.</p>
+  <p>v-col (v-flex in v1.0) is a content holder that must be a direct child of v-row</p>
+
+  <h3>Color (<a href="https://vuetifyjs.com/en/styles/colors">link</a></h3>
+  <p>The dark prop turns the text white. This is also done in a color or class prop with white--text.</p>
+  <p>Background colors (color="red") are varied with darken-4 or lighten-5; text color is varied with text-darken-3 or text--lighten-3. accent-1 through accent-4 increase saturation for more vivid colors.</p>
+
+  <h3>Tabs</h3>
+  <p>The <v-tabs> component also exposes a two-way binding property for controlling the currently visible tab — the v-model=”tabs” defines this. The variable tabs will hold a zero-based index of the selected tab.</p>
+</body>
+</html>

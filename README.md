@@ -1,29 +1,12 @@
-# studioapp1
+## studioapp1
 
-## Project setup
-```
-npm install
-```
+### Dev Notes
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Issues:
+ - font of tl title is not Palatino;
+ - with Fritz tabs, the UI components are two deep;
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Things to follow  up on:
 
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[Conversion from HTML to PDF](https://www.pagedjs.org/)
+[Popup labels](https://github.com/heelhook/chardin.js)
