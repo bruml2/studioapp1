@@ -3,8 +3,8 @@
     <v-row align-center justify-center>
       <v-col cols="6">
         <v-card class="elevation-12">
-          <v-toolbar dark color="primary">
-            <v-toolbar-title class="display-1">Title and Subtitle</v-toolbar-title>
+          <v-toolbar dark dense color="primary">
+            <v-toolbar-title class="title">Title and Subtitle</v-toolbar-title>
           </v-toolbar>
           <v-card-text>
             <v-form class="mt-2">
@@ -58,6 +58,10 @@ export default {
     }
   },
   methods: {
+    changeTab(val) {
+      console.log("Changing tab to: " + val)
+      this.$emit('changeTab', val)
+    },
     titleHdlr() {
       console.log("Title is: " + this.inputTitle)
       this.$emit('newtlvalue', { title: this.inputTitle })
@@ -66,10 +70,6 @@ export default {
       console.log(this.inputSubtitle)
       this.$emit('newtlvalue', { subtitle: this.inputSubtitle })
     },
-    changeTab(val) {
-      console.log("Changing tab to: " + val)
-      this.$emit('changeTab', val)
-    }
   }
   
 }

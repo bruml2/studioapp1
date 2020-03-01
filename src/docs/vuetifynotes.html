@@ -10,11 +10,18 @@
   <p>The entire vuetify section must be enclosed in v=app.  A permanent header is either <v-app-bar> or <v-toolbar>. Then v-content.</p>
   <pre>
     <v-app>
-      <v-app-bar></v-app-bar>
-         OR
-      <v-toolbar></v-toolbar>
+      <v-app-bar></v-app-bar> OR <v-toolbar></v-toolbar> OR <v-navigation-drawer></v-navigation-drawer>
       <v-content>
-        stuff
+        
+        components go here, each with the structure:
+        <v-container>
+          <v-row align="center" justify="center">
+            <v-col>
+              stuff
+            </v-col>
+          </v-row>
+        </v-container>
+
       </v-content>
     </v-app>
   </pre>
@@ -65,5 +72,26 @@
 
   <h3>Tabs</h3>
   <p>The <v-tabs> component also exposes a two-way binding property for controlling the currently visible tab — the v-model=”tabs” defines this. The variable tabs will hold a zero-based index of the selected tab.</p>
+
+  <h3>Lists</h3>
+  <p>Figure out this code:</p>
+  <pre>
+    <v-list>
+      <template v-for='era in timeline.erasArr'>
+        <v-list-group v-if='era.children && era.children.length' v-model='era.active'>
+            <v-list-tile @click='' slot='activator'>
+                <v-list-tile-title>{{era.text}}</v-list-tile-title>
+            </v-list-tile>
+            <node-list class='py-0 pl-3' :nodes='era.children'/>
+        </v-list-group>
+        <v-list-tile @click='' v-else>
+            <v-list-tile-title>{{node.text}}</v-list-tile-title>
+        </v-list-tile>
+      </template>
+  </v-list>
+
+  </pre>
+
+
 </body>
 </html>

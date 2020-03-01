@@ -16,9 +16,9 @@
       <v-tab>Controls</v-tab>
       <v-tab>Footer</v-tab>
       <v-tab-item class="Title"><TitleTab :timeline="timelineA" @changeTab="changeTab" /></v-tab-item>
-      <v-tab-item class="TimeAxis"><TimeAxisTab :timeline="timelineA"></TimeAxisTab></v-tab-item>
-      <v-tab-item class="Eras">Here is some text.<!-- <ErasTab :timeline="timelineA"></ErasTab> --></v-tab-item>
-      <v-tab-item class="Ranges">Here is some text.</v-tab-item>
+      <v-tab-item class="TimeAxis"><TimeAxisTab :timeline="timelineA" @changeTab="changeTab" /></v-tab-item>
+      <v-tab-item class="Eras"><ErasTab :timeline="timelineA" @changeTab="changeTab" /></v-tab-item>
+      <v-tab-item class="Ranges">This is the Ranges Tab.</v-tab-item>
     </v-tabs>
   </v-card>
   
@@ -38,7 +38,7 @@
 import TimelineView from '../../../studioTimelineView/src/components/TimelineView.vue'
 import TitleTab from '@/components/Title.vue'
 import TimeAxisTab from '@/components/TimeAxis.vue'
-// import ErasTab from '@/components/Eras.vue'
+import ErasTab from '@/components/Eras.vue'
 
 export default {
   name: "TabsInterfaceComponent",
@@ -46,7 +46,7 @@ export default {
     TimelineView,
     TitleTab,
     TimeAxisTab,
-    // ErasTab
+    ErasTab
   },
   data: () => ({
     currTab: "",
@@ -94,7 +94,7 @@ export default {
     },
     changeTab(val) {
       console.log("recvd changeTab with arg of " + val)
-      this.currTab = 1
+      this.currTab = val
     }
   }
 }
