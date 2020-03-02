@@ -3,8 +3,8 @@
     <v-row align-center justify-center>
       <v-col cols="6">
         <v-card class="elevation-12">
-          <v-toolbar dark color="primary">
-            <v-toolbar-title class="display-1">Time Axis</v-toolbar-title>
+          <v-toolbar dark dense color="primary">
+            <v-toolbar-title class="title">Time Axis</v-toolbar-title>
           </v-toolbar>
           <v-card-text>
             <v-form class="mt-2">
@@ -44,10 +44,10 @@
             </v-form>
           </v-card-text>
           <v-card-actions>
-            <v-btn dark color="primary lighten-2">Prev<v-icon left>mdi-arrow-left-thick</v-icon></v-btn>
+            <v-btn dark color="primary lighten-2" @click="changeTab(0)"><v-icon left>mdi-arrow-left-thick</v-icon>Prev</v-btn>
             <v-spacer></v-spacer>
             <v-btn dark color="green lighten-2">Apply</v-btn>
-            <v-btn dark color="primary lighten-2">Next<v-icon right>mdi-arrow-right-thick</v-icon></v-btn>
+            <v-btn dark color="primary lighten-2" @click="changeTab(2)">Next<v-icon right>mdi-arrow-right-thick</v-icon></v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -74,6 +74,10 @@ export default {
     }
   },
   methods: {
+    changeTab(val) {
+      console.log("Changing tab to: " + val)
+      this.$emit('changeTab', val)
+    },
     startYearHdlr() {
       console.log("Start Year is: " + this.inputStartYear)
       this.$emit('newtlvalue', { startYear: this.inputStartYear })
