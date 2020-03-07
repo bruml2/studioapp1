@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # abort (exit) on errors; built-in cmd (see man bash);
 set -e
