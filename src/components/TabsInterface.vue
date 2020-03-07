@@ -36,9 +36,9 @@
 
 <script>
 import TimelineView from '../../../studioTimelineView/src/components/TimelineView.vue'
-import TitleTab from '@/components/Title.vue'
-import TimeAxisTab from '@/components/TimeAxis.vue'
-import ErasTab from '@/components/Eras.vue'
+import TitleTab from '@/components/TitleTab.vue'
+import TimeAxisTab from '@/components/TimeAxisTab.vue'
+import ErasTab from '@/components/ErasTab.vue'
 
 export default {
   name: "TabsInterfaceComponent",

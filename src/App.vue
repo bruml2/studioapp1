@@ -14,21 +14,31 @@
         <span class="mr-2">User Guide</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
-    </v-toolbar>
+      <v-btn
+        href="https://github.com/bruml2/studioapp1"
+        target="_blank"
+        text
+      >
+        <span class="mr-2">GitHub Repo</span>
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>    </v-toolbar>
 
     <v-content>
+      <TabUI />
       <TabsInterface />
     </v-content>
-    
+
   </v-app>
 </template>
 
 <script>
+import TabUI from './components/TabUI.vue';
 import TabsInterface from './components/TabsInterface.vue';
 
 export default {
   name: 'App',
   components: {
+    TabUI,
     TabsInterface
   },
 };
