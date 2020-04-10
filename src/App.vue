@@ -7,21 +7,15 @@
         <span class="font-weight-light text-lowercase ml-4">a work in progress</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn text class="indigo"
-        href="userguide.html"
-        target="_blank"
-      >
+      <v-btn text class="indigo" href="userguide.html" target="_blank">
         <span class="mr-2">User Guide</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
-      <v-btn
-        href="https://github.com/bruml2/studioapp1"
-        target="_blank"
-        text
-      >
+      <v-btn text href="https://github.com/bruml2/studioapp1" target="_blank">
         <span class="mr-2">GitHub Repo</span>
         <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>    </v-toolbar>
+      </v-btn>
+    </v-toolbar>
 
     <v-content>
       <TabUI />
@@ -40,6 +34,6 @@ export default {
   components: {
     TabUI,
     TabsInterface
-  },
-};
+  }
+}
 </script>

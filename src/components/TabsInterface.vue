@@ -26,16 +26,18 @@
     <v-card-text>Current tab: {{ currTab }}</v-card-text>
   </v-card>
 
+  <!--
   <v-card>
     <TimelineView timelineID="timelineA" :timeline="timelineA"
                   @newtlvalue="timelineA = Object.assign({}, timelineA, $event)"
                   :tvcWidth="tvcWidth" :showProlog="false" />
   </v-card>
+  -->
 </v-container>
 </template>
 
 <script>
-import TimelineView from '../../../studioTimelineView/src/components/TimelineView.vue'
+// import TimelineView from '../../../studioTimelineView/src/components/TimelineView.vue'
 import TitleTab from '@/components/TitleTab.vue'
 import TimeAxisTab from '@/components/TimeAxisTab.vue'
 import ErasTab from '@/components/ErasTab.vue'
@@ -43,7 +45,7 @@ import ErasTab from '@/components/ErasTab.vue'
 export default {
   name: "TabsInterfaceComponent",
   components: {
-    TimelineView,
+    // TimelineView,
     TitleTab,
     TimeAxisTab,
     ErasTab

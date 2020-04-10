@@ -8,13 +8,18 @@
       This should probably be a modal.
     </v-card-text>
     <v-card-actions>
-      <v-btn>Create a new timeline</v-btn>
+      <v-btn @click="fetchTL">Create a new timeline</v-btn>
     </v-card-actions>
   </v-card>
 </template>
 
 <script>
   export default {
+    methods: {
+      fetchTL() {
+        this.$emit("fetchTL", {msg:"new"})
+      }
+    }
     
   }
 </script>

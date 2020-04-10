@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TitleTimeAxisTab.vue should have a custom title and match snapshot 1`] = `
+<v-form>
+  <v-container>
+    <v-card width="50rem" color="blue-grey lighten-5" raised="" class="my-3 mx-auto">
+      <v-card-title>
+        <h1 class="headline font-weight-bold">Titles and Time Axis</h1>
+      </v-card-title>
+      <v-card-text>
+        <v-text-field label="Title" outlined="" dense=""></v-text-field>
+        <v-text-field label="Subtitle" placeholder="type here" outlined="" dense=""></v-text-field>
+        <div id="tvHeader" class="tvHeader"><span class="tlTitle">Test Title</span> &nbsp; &nbsp;
+          <span class="tlSubtitle"></span></div>
+        <v-row>
+          <v-col cols="2">
+            <v-text-field label="Start Year" outlined="" dense="" width="10rem"></v-text-field>
+          </v-col>
+          <v-col cols="2">
+            <v-text-field label="Stop Year" outlined="" dense=""></v-text-field>
+          </v-col>
+          <v-col cols="8">
+            Tick Interval:
+            <v-radio-group row="">
+              <v-radio label="5" value="5"></v-radio>
+              <v-radio label="10" value="10"></v-radio>
+              <v-radio label="20" value="20"></v-radio>
+              <v-radio label="25" value="25"></v-radio>
+              <v-radio label="50" value="50"></v-radio>
+              <v-radio label="100" value="100"></v-radio>
+            </v-radio-group>
+          </v-col>
+        </v-row>
+        <timeaxisview-stub timeaxispropobj="[object Object]"></timeaxisview-stub>
+      </v-card-text>
+    </v-card>
+  </v-container>
+</v-form>
+`;
