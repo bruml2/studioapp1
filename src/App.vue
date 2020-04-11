@@ -4,7 +4,7 @@
     <v-toolbar dark height="40" color="indigo">
       <v-toolbar-title class="headline text-uppercase font-weight-bold ml-3">
         <span>History Timeline Studio &nbsp;</span>
-        <span class="font-weight-light text-lowercase ml-4">a work in progress</span>
+        <span class="font-weight-light text-lowercase ml-4">a work in progress [studioapp1]</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn text class="indigo" href="userguide.html" target="_blank">

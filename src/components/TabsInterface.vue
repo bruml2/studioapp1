@@ -1,5 +1,6 @@
 <template>
 <v-container>
+  <v-card width="40%" class="mx-auto" color="red lighten-3" raised>This is TabsInterface.vue</v-card>
   <v-card>
     <v-tabs centered dark
       v-model="currTab"
@@ -7,7 +8,7 @@
       slider-size="4"
       slider-color="white"
     >
-      <v-tab>Title</v-tab>
+      <v-tab>Titles</v-tab>
       <v-tab>Time Axis</v-tab>
       <v-tab>Eras</v-tab>
       <v-tab>Ranges</v-tab>
@@ -21,7 +22,7 @@
       <v-tab-item class="Ranges">This is the Ranges Tab.</v-tab-item>
     </v-tabs>
   </v-card>
-  
+
   <v-card class="ma-4">
     <v-card-text>Current tab: {{ currTab }}</v-card-text>
   </v-card>

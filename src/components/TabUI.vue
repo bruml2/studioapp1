@@ -1,5 +1,7 @@
 <template>
   <v-container>
+    <v-card width="20%" class="mx-auto" color="red lighten-3" raised>This is TabUI.vue</v-card>
+
     <v-card width="98%" class="my-10 mx-auto" color="blue-grey lighten-4" raised>
       <!-- note vertical, grow, height(just the tab itself), show-arrows attributes -->
       <!-- see v-window for auto animation amoung windows -->
